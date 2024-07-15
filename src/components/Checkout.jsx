@@ -6,7 +6,9 @@ const Checkout = () => {
   return (
     <div className="w-[1268px] h-[597px] flex justify-between items-center mx-auto my-20">
       <div className="w-[612px] h-[538px]">
-        <h1 className="font-bold text-3xl uppercase tracking-wide">Checkout</h1>
+        <h1 className="font-bold text-3xl uppercase tracking-wider">
+          Checkout
+        </h1>
         <div className="w-[612px] h-[353px] my-6">
           <p className="text-xl font-bold capitalize ">delivery address</p>
 
@@ -64,7 +66,7 @@ const Checkout = () => {
             </Link>
 
             <button className="w-[296px] h-[45px] text-white rounded-md bg-red-600 font-bold capitalize text-2xl">
-              save and continue
+              <Link to="/payment">save and continue</Link>
             </button>
           </div>
         </div>

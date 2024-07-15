@@ -8,6 +8,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Notification from "./Notification";
 import { addItem } from "../utils/cartSlice";
+import { Link } from "react-router-dom";
 
 const EachProduct = () => {
   const productDetails = useSelector((store) => store.products.productDetails);
@@ -19,7 +20,6 @@ const EachProduct = () => {
   const containerRef = useRef(null);
 
   const asin = searchParams.get("asin");
-  //   console.log(asin);
 
   const dispatch = useDispatch();
 
@@ -209,7 +209,12 @@ const EachProduct = () => {
             className="w-[92%] flex pt-10 px-10 overflow-x-hidden gap-4 mx-auto relative"
           >
             {products.map((product) => (
-              <ProductCard data={product} key={product.asin} />
+              <Link
+                key={product.asin}
+                to={"/product-details?asin=" + product.asin}
+              >
+                <ProductCard data={product} key={product.asin} />
+              </Link>
             ))}
           </div>
           <IoIosArrowForward

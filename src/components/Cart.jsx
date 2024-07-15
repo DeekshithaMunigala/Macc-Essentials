@@ -57,15 +57,17 @@ const Cart = () => {
               </p>
             </div>
 
-            <button
-              className="rounded tracking-wide bg-red-500 text-white py-1 px-3 mt-4 mr-5 hover:bg-red-600 absolute right-0"
-              onClick={handleClearCart}
-            >
-              {cartItems.length === 1 ? `Clear Item` : `Clear Items`}
-            </button>
-            <button className="rounded uppercase tracking-wide bg-red-500 text-white py-1 px-3 mt-16 mr-5 hover:bg-red-600 absolute right-0">
-              <Link to="/checkout">Check out</Link>
-            </button>
+            <div className="flex justify-between items-center mt-8">
+              <button
+                className="hover:bg-red-600 w-[150px] h-[35px] text-white rounded-md bg-red-600 font-semibold capitalize text-xl "
+                onClick={handleClearCart}
+              >
+                {cartItems.length === 1 ? `Clear Item` : `Clear Items`}
+              </button>
+              <button className=" hover:bg-red-600 w-[150px] h-[35px] text-white rounded-md bg-red-600 font-semibold capitalize text-xl">
+                <Link to="/checkout">Check out</Link>
+              </button>
+            </div>
           </div>
         )}
       </div>
