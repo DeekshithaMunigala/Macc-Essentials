@@ -39,7 +39,6 @@ This will start the development server and you can view the website at http://lo
 
 - src/assets: Contains images and other static assets.
 - src/components: Reusable React components.
-- src/pages: Page components corresponding to different routes.
 - src/store: Redux store setup and slices.
 
 ## Step-by-Step Guide
